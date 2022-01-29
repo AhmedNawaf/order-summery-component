@@ -1,0 +1,132 @@
+/* Importing */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --pare-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --white: #fff
+}
+/* Browser Default Settings Removed*/
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--pare-blue);
+}
+h1,h2,h3 {
+    margin: 0;
+}
+/* Card */
+
+.card {
+    max-width: 380px;
+    border-radius: 15px;
+    background-color: var(--white);
+}
+.card-image img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.card-details {
+    text-align: center;
+    padding: 1rem 3rem;
+}
+.card-details h1 {
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.card-details p {
+    color: var(--Desaturated-blue);
+    font-size: 15px;
+    line-height: 1.5;
+}
+.price {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+.price div {
+    flex: 1;
+    text-align: left;
+}
+.price h2 , .price h3 {
+    font-size: 1rem;
+}
+.price h2 {
+    color: var(--dark-blue);
+    font-weight: 900;
+    line-height: 1.5;
+}
+.price h3 {
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+.price a {
+    color: var(--bright-blue);
+    font-size: 14px;
+    display: inline;
+    line-height: 50px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+.order {
+    margin: 2rem 0 1rem;
+}
+.btn {
+    display: block;
+    text-decoration: none;
+    background-color: var(--bright-blue);
+    padding: .7rem 2rem;
+    border-radius: 10px;
+    color: var(--very-pale-blue);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.cancel {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* hover */
+.btn:hover,
+.price a:hover {
+    opacity: 0.7;
+}
+.cancel:hover {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+
+@media (min-width: 380px) and (max-width: 700px) {
+    .card-container {
+        width: 100%;
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+    .btn {
+        font-size: 1rem;
+    }
+    .cancel {
+        font-weight: 900;
+
+    }
+}
+
+
+.attribution {margin-top: 1rem; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
